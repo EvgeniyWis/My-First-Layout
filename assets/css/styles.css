@@ -1,0 +1,1800 @@
+/* Определение шрифтов */
+@font-face {
+  font-family: "Roboto-LightItalic";
+  src: url(/Sites/Mogo/assets/fonts/Roboto/Roboto-LightItalic.ttf) format("truetype"),
+        url(/Sites/Mogo/assets/fonts/Roboto/Roboto-LightItalic.woff) format("woff"),
+        url(/Sites/Mogo/assets/fonts/Roboto/Roboto-LightItalic.woff2) format("woff2"),
+        url(/Sites/Mogo/assets/fonts/Roboto/Roboto-LightItalic.otf) format("opentype");
+} 
+
+@font-face {
+  font-family: Roboto;
+  src: url(/Sites/Mogo/assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype"),
+        url(Sites/Mogo/assets/fonts/Roboto/Roboto-Regular.woff) format("woff"),
+        url(/Sites/Mogo/assets/fonts/Roboto/Roboto-Regular.woff2) format("woff2"),
+        url(/Sites/Mogo/assets/fonts/Roboto/Roboto-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Montserrat - Regular";
+  src: url(/Sites/Mogo/assets/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype"),
+        url(/Sites/Mogo/assets/fonts/Montserrat/Montserrat-Regular.woff) format("woff"),
+        url(/Sites/Mogo/assets/fonts/Montserrat/Montserrat-Regular.woff2) format("woff2"),
+        url(/Sites/Mogo/assets/fonts/Montserrat/Montserrat-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Montserrat - Bold";
+  src: url(/Sites/Mogo/assets/fonts/Montserrat/Montserrat-Bold.ttf) format("truetype"),
+        url(/Sites/Mogo/assets/fonts/Montserrat/Montserrat-Bold.woff) format("woff"),
+        url(/Sites/Mogo/assets/fonts/Montserrat/Montserrat-Bold.woff2) format("woff2"),
+        url(/Sites/Mogo/assets/fonts/Montserrat/Montserrat-Bold.otf) format("opentype");
+}
+
+/* Вёрстка */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8vmax;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+svg,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 1000px;
+  background: url(../images/Other/background.png) center no-repeat;
+  background-size: cover;
+}
+
+.intro__inner {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro__title {
+  font-size: 8vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #fff;
+}
+
+.intro__title::after {
+  content: "";
+  display: block;
+  width: 7%;
+  height: 3px;
+  background-color: #fff;
+  margin: 60px auto;
+}
+
+.intro__suptitle {
+  color: #fff;
+  font-family: "Kaushan Script";
+  font-size: 4vmax;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Button */
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  border: 3px #fff solid;
+  padding: 2% 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8vmax;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.1s linear;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+/* Header */
+
+.header {
+  width: 100%;
+  padding-top: 15px;
+  position: absolute;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 1.5vmax;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Navigation */
+
+.nav {
+  text-transform: uppercase;
+  font-size: 0.7vmax;
+}
+
+.nav_burger {
+  display: none;
+}
+
+.nav_burger svg {
+  width: 100%;
+  height: 25px;
+  stroke: #fff;
+}
+
+.nav__link,
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fce38a;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.nav__link:hover {
+  color: #fce38a;
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+}
+
+.icon {
+  width: 40%;
+  height: 20px;
+}
+
+.icon_block {
+  display: inline-block;
+}
+
+.icon:hover {
+  stroke: #fce38a
+}
+
+/* Slider */
+
+.slider {
+  position: relative;
+  top: 10%;
+}
+
+.slider__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__item {
+  width: 23%;
+  padding: 20px 0;
+  border-top: 3px solid #fff;
+  font-size: 120%;
+  color: #fff;
+  text-transform: uppercase;
+  opacity: 0.7;
+  position: relative;
+}
+
+.slider__item.active {
+  opacity: 1;
+}
+
+.slider__item.active::before {
+  content: "";
+  display: block;
+  width: 26%;
+  height: 3px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  z-index: 1;
+  background-color: #f38181;
+}
+
+.slider__num {
+  font-size: 1.25vmax;
+  font-weight: 700;
+}
+
+/* About Us. Text */
+
+.AboutUs_container,
+.WeWorkWith_container,
+.WhatWeDo_container,
+.ForAllDevices_container,
+.WhoWeAre_container,
+.OurWork_container,
+.OurStories_container {
+  width: 100%;
+  min-height: 750px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.AboutUs__inner,
+.WeWorkWith__inner,
+.ForAllDevices__inner,
+.WhatWeDo__inner,
+.WhoWeAre__inner,
+.OurWork__inner,
+.HappyClients__inner,
+.OurStories__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  text-align: center;
+  gap: 120px;
+}
+
+.AboutUs_header__inner h3,
+.WeWorkWith_header__inner h3,
+.ForAllDevices_header__inner h3,
+.WhatWeDo_header__inner h3,
+.WhoWeAre_header__inner h3,
+.OurWork_header__inner h3,
+.HappyClients_header__inner h3,
+.OurStories_header__inner h3 {
+  font-weight: 400;
+  font-size: 1.25vmax;
+  font-family: "Kaushan Script";
+}
+
+.AboutUs_header__inner h2,
+.WeWorkWith_header__inner h2,
+.ForAllDevices_header__inner h2,
+.WhatWeDo_header__inner h2,
+.WhoWeAre_header__inner h2,
+.OurWork_header__inner h2,
+.HappyClients_header__inner h2,
+.OurStories_header__inner h2 {
+  font-family: Montserrat;
+  font-size: 1.5vmax;
+  text-transform: uppercase;
+}
+
+.AboutUs_header__inner h2::after,
+.WeWorkWith_header__inner h2::after,
+.ForAllDevices_header__inner h2::after,
+.WhatWeDo_header__inner h2::after,
+.WhoWeAre_header__inner h2::after,
+.OurWork_header__inner h2::after,
+.HappyClients_header__inner h2::after,
+.OurStories_header__inner h2::after {
+  content: "";
+  display: block;
+  width: 10%;
+  min-width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 30px auto;
+}
+
+.AboutUs_header__inner p,
+.WhoWeAre_header__inner p,
+.OurWork_header__inner p,
+.WhatWeDo_header__inner p {
+  width: 100%;
+  height: 39px;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 125%;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* About Us. Images */
+
+.AboutUs_image__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.AboutUs__item:hover {
+  position: relative;
+  background-color: #95e1d3;
+}
+
+.AboutUs__img_block:hover {
+  transform: translate3d(-10px, -10px, 0);
+}
+
+.AboutUs__img_block:hover::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+  opacity: 0.8;
+}
+
+.AboutUs__img_block:hover .AboutUs__img::after {
+  content: "Super Team";
+  display: block;
+  position: absolute;
+  left: 33%;
+  top: 55%;
+  width: 35%;
+  height: 10%;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 0.9vmax;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.AboutUs__img_block:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 36%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/Other/users.png);
+  background-repeat: no-repeat;
+  background-size: 29%;
+}
+
+.AboutUs__img_block,
+.OurStories__img {
+  transition: all 0.3s linear;
+}
+
+.AboutUs__img img {
+  display: block;
+  transition: all 0.3s linear;
+  width: 100%;
+}
+
+/* Statistics */
+
+.statistics {
+  display: inline-flex;
+  background-color: #95e1d3;
+  width: 100%;
+  justify-content: center;
+}
+
+.statistics__inner {
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 62%;
+  padding-bottom: 5%;
+}
+
+.statistics_item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding-top: 5%;
+  border-left: 2px solid #ace8dd;
+  border-right: 2px solid #ace8dd;
+  color: white;
+  font-family: Montserrat;
+  font-size: 4vw;
+  font-weight: 700;
+  min-width: 25%;
+  height: 143%;
+}
+
+.statistics_item span {
+  font-size: 25%;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* We work with. Text */
+
+.WeWorkWith__inner {
+  margin-top: 100px;
+  gap: 60px;
+}
+
+/* Amazing Services */
+
+.services {
+  width: 150%;
+}
+
+.services__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 80%;
+  margin-left: 13%;
+  gap: 40px;
+}
+
+.service svg {
+  color: #95e1d3;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  width: 12%;
+  min-width: 15px;
+}
+
+.service h2 {
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.service p {
+  width: 100%;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.service:nth-of-type(3)::after {
+  content: "";
+  display: block;
+  position: relative;
+  right: 220%;
+  top: 1%;
+  width: 320%;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+/* For all devices. Text */
+
+.ForAllDevices_header__inner {
+  padding-top: 100px;
+}
+
+.ForAllDevices_container {
+  background: url(../images/ForAllDevices_images/ForAllDevices_background.png) center no-repeat;
+  background-size: cover;
+}
+
+.ForAllDevices__inner {
+  gap: 60px;
+}
+
+/* For all devices. Images */
+
+.ForAllDevices__inner {
+  position: relative;
+}
+
+.ForAllDevices_image__inner {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  justify-items: center;
+  align-items: center;
+}
+
+.ForAllDevices_phone1 {
+  position: absolute;
+  width: 35%;
+  height: 70%;
+  right: 33%;
+  top: 30%;
+}
+
+.ForAllDevices_phone2 {
+  position: absolute;
+  width: 25%;
+  height: 65%;
+  right: 20%;
+  top: 50%;
+}
+
+.ForAllDevices_header__inner h2::after {
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+/* What We Do. Text */
+
+.WhatWeDo_header__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 350px;
+}
+
+.WhatWeDo_container {
+  background-color: #fff;
+  height: 900px;
+  margin-bottom: 300px;
+}
+
+.WhatWeDo_main__inner {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  height: 400px;
+}
+
+.WhatWeDo_main__inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.WhatWeDo_header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+}
+
+.WhatWeDo_header svg {
+  width: 7%;
+  height: 7%;
+  min-width: 30px;
+}
+
+.WhatWeDo_service p {
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 500;
+}
+
+.WhatWeDo_services {
+  width: 50%;
+}
+
+.WhatWeDo_text {
+  width: 100%;
+  height: 180px;
+  border: 1px solid #e5e5e5;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #95e1d3 #f5f5f5
+}
+
+.WhatWeDo_text p {
+  color: #999999;
+  font-family: "Roboto-LightItalic";
+  font-size: 0.8vmax;
+  font-weight: 200;
+  line-height: 24px;
+  text-align: left;
+  padding: 5px 15px;
+}
+
+.WhatWeDo_text::-webkit-scrollbar {
+  width: 5px;
+}
+
+.WhatWeDo_text::-webkit-scrollbar-thumb {
+  background-color: #95e1d3;
+  border-radius: 30px;
+}
+
+.WhatWeDo_chevron {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: auto;
+  width: 50px;
+  height: 30px;
+}
+
+.WhatWeDo_chevron svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Scroll */
+
+body::-webkit-scrollbar {
+  width: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #f38181, #fce38a);
+  border-radius: 15px;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #fce38a #f5f5f5;
+}
+
+/* Quote */
+
+.quote {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  margin-bottom: 120px;
+}
+
+.blockquote {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote blockquote p {
+  color: #999999;
+  font-family: "Roboto-LightItalic";
+  font-size: 1.25vmax;
+  font-weight: 400;
+}
+
+.quote_icon {
+  border: 3px solid #95e1d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 150px;
+  min-width: 70px
+}
+
+.quote_icon svg {
+  width: 60%;
+  height: 60%;
+
+}
+
+.quote_chevron {
+  margin: 50px;
+  width: 50px;
+  height: 30px;
+}
+
+.quote_author {
+  min-width: 200%;
+  color: #333333;
+  font-family: "Kaushan Script";
+  font-size: 1.25vmax;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 4%;
+}
+
+.quote_author::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: #f38181;
+}
+
+/* Who We Are. Images */
+
+.WhoWeAre_image__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+  width: 100%;
+}
+
+.WhoWeAre__item {
+  display: block;
+  width: 100%;
+  height: 85%
+}
+
+.WhoWeAre__item:hover {
+  position: relative;
+  background-color: #95e1d3;
+  transition: all 0.2s linear;
+}
+
+.WhoWeAre__img:hover {
+  transform: translate3d(-10px, -10px, 0);
+}
+
+.WhoWeAre__img:hover::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+  opacity: 0.8;
+  transition: all 0.2s linear;
+}
+
+.WhoWeAre__img:hover .WhoWeAre_socials {
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+
+.WhoWeAre__img {
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.WhoWeAre__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.WhoWeAre_socials {
+  width: 60%;
+  height: 13%;
+  display: flex;
+  background-color: #fce38a;
+  position: absolute;
+  left: 19%;
+  top: 42%;
+  opacity: 0;
+}
+
+.WhoWeAre_socials a {
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.WhoWeAre_social svg {
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  fill: #f38181;
+}
+
+.WhoWeAre_socials a:hover {
+  background-color: #f38181;
+  transition: all 0.2s linear;
+}
+
+.WhoWeAre_socials a:hover svg {
+  fill: #fff;
+  transition: all 0.2s linear;
+}
+
+/* Who We Are. Text */
+
+.WhoWeAre__img h3 {
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.WhoWeAre_img p {
+  color: #999999;
+  font-family: "Roboto-LightItalic";
+  font-size: 0.8vmax;
+  line-height: 24px
+}
+
+/* Logos */
+
+.logos {
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+  margin-bottom: 100px;
+}
+
+.logos img {
+  width: 65%;
+}
+
+/* Some of our work. Images. */
+
+.OurWork_image__inner {
+  display: grid;
+  grid-template-columns: repeat(4, [col] 1fr);
+  grid-template-rows: repeat(2, [row] 1fr);
+  max-width: 100%;
+  height: 100%;
+}
+
+.OurWork__inner {
+  height: 300px;
+}
+
+.OurWork__item {
+  height: 400px;
+}
+
+.OurWork__item_6 {
+  grid-column: col 4;
+}
+
+.OurWork__item:hover {
+  position: relative;
+}
+
+.OurWork__img:hover::before {
+  content: "Lorem ipsum dolor sit";
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #f38181, #fce38a);
+  opacity: 0.8;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Roboto-LightItalic";
+  font-size: 0.7vmax;
+  line-height: 24px;
+  text-align: center;
+  background-size: cover;
+}
+
+.OurWork__img:hover::after {
+  content: url(../images/Other/image.png) "\A creatively designed" ;
+  display: block;
+  position: absolute;
+  left: 8vw;
+  top: 30%;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 0.7vmax;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+
+.OurWork__img img {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+.OurWork__img_special img {
+  display: block;
+  width: 100%;
+  height: 800px;
+}
+
+.OurWork__img_special:hover::before {
+  content: "Lorem ipsum dolor sit";
+  display: flex;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #6dfefe, #01185c);
+  opacity: 0.8;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Roboto-LightItalic";
+  font-size: 0.7vmax;
+  line-height: 24px;
+  text-align: center;
+  background-size: cover;
+}
+
+.OurWork__img_special:hover::after {
+  content: url(../images/Other/image.png) "\A creatively designed" ;
+  display: block;
+  position: absolute;
+  left: 8vw;
+  top: 75%;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 0.7vmax;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+
+
+/* Quote 2 */
+
+.quote_2 {
+  width: 100%;
+  padding: 50px;
+  background-color: #fff;
+  margin-top: 100px;
+}
+
+.quote_2 blockquote p {
+  width: 135%;
+  color: #999999;
+  font-family: "Roboto-LightItalic";
+  font-size: 1.25vmax;
+  text-align: left;
+}
+
+.quote_author {
+  color: #333333;
+  font-family: "Kaushan Script";
+  font-size: 1.25vmax;
+  font-weight: 400;
+  text-align: left;
+}
+
+.quote_author::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: #f38181;
+}
+
+/* Happy Clients */
+
+.HappyClients_container {
+  display: inline;
+  background: url(../images/HappyClients_images/happyclients_background_image.png) center no-repeat;
+  width: 100%;
+  min-height: 1200px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-size: cover;
+}
+
+.HappyClients_clients__inner {
+  display: grid;
+  grid-template-columns: repeat(2, [col] 1fr);
+  grid-template-rows: repeat(2, [row] 1fr);
+  position: relative;
+  gap: 80px 10px;
+}
+
+.HappyClients__img {
+  float: left;
+  margin-top: -30px;
+  height: 200px;
+}
+
+.HappyClients__item_info {
+  display: flex;
+  flex-direction: column;
+  padding-right: 5%
+}
+
+.HappyClients__item_info h2 {
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.HappyClients__item_info h3 {
+  color: #333333;
+  font-family: "Roboto-LightItalic";
+  font-weight: 100;
+  font-size: 0.8vmax;
+  line-height: 24px;
+  text-align: left;
+}
+
+.HappyClients__item_info h3::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 3px;
+  background-color: #f38181;
+  position: relative;
+  margin-top: 5%;
+}
+
+.HappyClients__item_info p {
+  color: #999999;
+  font-family: Roboto;
+  font-size: 0.8vmax;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 30px;
+}
+
+/* Our Stories */
+
+.OurStories_container {
+  height: 450px;
+}
+
+.OurStories_header__inner h3 {
+  margin-top: 100px;
+}
+
+.OurStories_image__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 10px;
+}
+
+.OurStories__inner {
+  gap: 40px;
+}
+
+.OurStories__item {
+  position: relative;
+}
+
+.OurStories__item img {
+  width: 100%;
+}
+
+.OurStories__img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #95e1d3;
+  bottom: 10%;
+  width: 18%;
+  height: 30%;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 1.5vmax;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.OurStories__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 13%;
+  right: 80.5%;
+  width: 20%;
+  color: #ffffff;
+  font-family: "Roboto-LightItalic";
+  text-align: center;
+  font-size: 0.8vmax;
+}
+
+.OurStories__img_1::after {
+  content: "15";
+}
+
+.OurStories__item:nth-child(1)::after {
+  content: "jan";
+}
+
+.OurStories__img_2::after {
+  content: "14";
+}
+
+.OurStories__item:nth-child(2)::after {
+  content: "june";
+}
+
+.OurStories__img_3::after {
+  content: "12";
+}
+
+.OurStories__item:nth-child(3)::after {
+  content: "july";
+}
+
+.OurStories__item_info {
+  position: absolute;
+  top: 100%;
+  left: 10px;
+}
+
+.OurStories__item_info p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 20px auto;
+}
+
+.OurStories__item_info h3 {
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.OurStories__item_info p {
+  width: 100%;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 0.75vmax;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.OurStories_item_statistics {
+  width: 6%;
+  min-width: 15px;
+  fill: #95e1d3;
+  gap: 5px;
+}
+
+.div_views {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 90%;
+  gap: 5px;
+  font-size: 0.8vmax;
+}
+
+.div_comments {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 90%;
+  left: 20%;
+  gap: 5px;
+  font-size: 0.8vmax;
+}
+
+/* Open Map */
+
+.OpenMap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background: url(../images/Other/OpenMap_background.png) center no-repeat;
+  background-size: cover;
+  margin-top: 300px;
+  gap: 5px;
+}
+
+.map_pin {
+  width: 30px;
+  height: 30px;
+  stroke: #f38181;
+}
+
+.OpenMap h6 {
+  color: #f38181;
+  font-family: Montserrat;
+  font-size: 1.25vmax;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.OpenMap h6::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 30px auto;
+}
+
+/* Footer */
+
+/* Footer contact information */
+
+.footer {
+  display: grid;
+  width: 100%;
+  height: 560px;
+  grid-template-columns: 25% 20% 15%;
+  margin-bottom: 3%;
+  gap: 15%;
+}
+
+.footer::after {
+  content: "";
+  display: flex;
+  margin-top: 3%;
+  margin-left: 62%;
+  width: 300%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.footer_contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 65%;
+  width: 120%;
+}
+
+.footer_contact_info_caption {
+  margin-top: 80px;
+  color: #cccccc;
+  font-family: Montserrat;
+  font-size: 3.5vmax;
+  font-weight: 700;
+  position: relative;
+  right: 4px;
+}
+
+.footer_contact_info_information {
+  width: 100%;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 0.9vmax;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.footer_contact_info_followers {
+  margin-top: 50px;
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 400;
+  text-align: left;
+  font-family: "Montserrat - Regular";
+  margin-bottom: 0
+}
+
+.footer_contact_info_followers::after {
+  content: "";
+  display: block;
+  margin-top: 20px;
+  width: 450%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.footer_contact_info_followers strong {
+  font-family: "Montserrat - Bold";
+  font-size: 1vmax;
+  font-weight: 700;
+}
+
+.footer_contact_info_followUs {
+  display: flex;
+}
+
+.footer_contact_info_followUs a {
+  display: inline;
+}
+
+.footer_contact_info_followUs svg {
+  fill: #95e1d3;
+  width: 50%;
+  margin-top: 40%
+}
+
+.footer_contact_info_followUs p {
+  margin-top: 5%;
+  width: 100%;
+  color: #999999;
+  font-family: "Roboto-LightItalic";
+  font-size: 0.8vmax;
+  text-align: left;
+}
+
+.footer_contact_info_subscribe {
+  display: flex;
+  width: 80%;
+}
+
+.footer_contact_info_subscribe_input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  background-color: #ffffff;
+  padding: 0;
+  margin-left: 5px;
+  margin-top: 30px;
+}
+
+.footer_contact_info_subscribe_input:focus {
+  outline: none;
+}
+
+.footer_contact_info_subscribe_input::placeholder {
+  color: #cccccc;
+  font-family: "Roboto-LightItalic";
+  font-size: 0.8vmax;
+  line-height: 24px;
+  text-align: left;
+}
+
+.footer_contact_info_subscribe_button {
+  width: 60%;
+  height: 40px;
+  background-color: #95e1d3;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+/* Footer Blogs */
+
+.footer_blogs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-left: 35%;
+}
+
+.footer_blogs_caption {
+  margin-top: 80px;
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.footer_blogs_images {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+} 
+
+.footer_blogs_image {
+  width: 100%;
+  height: 80%;
+}
+
+.footer_blogs_image_container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer_blogs_articles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_blogs_image_caption {
+  display: inline;
+  width: 140%;
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vw;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.footer_blogs_image_paragraph {
+  color: #999999;
+  font-family: "Roboto-LightItalic";
+  font-size: 0.8vw;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+/* Footer Instagram */
+
+.footer_instagram {
+  width: 100%;
+  height: 100%;
+}
+
+.footer_instagram_images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.footer_instagram_image {
+  width: 100%;
+  height: 100%;
+}
+
+.footer_instagram_caption {
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.footer_instagram_paragraph {
+  color: #333333;
+  font-family: "Roboto-LightItalic";
+  font-size: 0.8vmax;
+  line-height: 24px;
+  text-align: left;
+}
+
+.footer_copyrights {
+  margin: 6% auto;
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 0.8vmax;
+  font-weight: 600;
+  text-align: center;
+}
+
+.footer_author {
+  color: #f38181;
+}
+
+
+/* Адаптивная вёрстка */
+
+
+@media screen and (max-width: 1350px) {
+
+  /* Обновление шрифтов */
+
+  .HappyClients__item_info h3,
+  .HappyClients__item_info h5,
+  .HappyClients__item_info p,
+  .OurStories__item_info p,
+  .WhatWeDo_service p,
+  .div_views,
+  .div_comments,
+  .footer_contact_info_information,
+  .footer_contact_info_subscribe_button,
+  .footer_contact_info_subscribe_input::placeholder,
+  .footer_blogs_caption,
+  .footer_contact_info_followers,
+  .footer_blogs_image_caption,
+  .footer_blogs_image_paragraph,
+  .footer_instagram_caption,
+  .footer_instagram_paragraph,
+  .footer_copyrights {
+    font-size: 1.1vmax
+  }
+
+  /* We work with. Text */
+
+  .services__inner {
+    padding-left: 5%;
+    width: 65%
+  }
+
+  /* Who We Are */
+  .WhoWeAre__inner {
+    width: 80%;
+  }
+
+  /* Footer. Adaptive design. */
+
+  /* Footer contact information */
+
+  .footer {
+    display: inline;
+    grid-template-columns: 1fr;
+  }
+  
+  .footer_contact_info,
+  .footer_blogs,
+  .footer_instagram {
+    margin: 0;
+    width: 100%;
+    padding: 1%;
+  }
+
+  .footer_contact_info_caption {
+    left: 40.5%
+  }
+
+  .footer_contact_info_followUs p {
+    position: relative;
+    left: 40.5%;
+    font-size: 2vmax;
+  }
+  
+  .footer_contact_info_followUs a {
+    width: 10%;
+    height: 10%;
+  }
+
+  .footer_contact_info_followUs {
+    flex-wrap: wrap;
+  }
+
+  .footer_contact_info_followUs svg {
+    margin-left: 100%;
+  }
+
+
+  .footer_contact_info_followers {
+    margin-left: 41.5%;
+  }
+
+  .footer_contact_info_followers::after {
+    width: 1900%;
+    position: relative;
+    right: 1000%;
+  }
+
+  /* Footer Blogs/Footer Instagram */
+
+  .footer_blogs_caption,
+  .footer_instagram_caption,
+  .footer_instagram_paragraph {
+    position: relative;
+    left: 43%;
+  }
+
+  .footer_blogs_image {
+    width: 40%;
+    height: 30%;
+  }
+
+  .footer_blogs_articles {
+    margin: 0;
+  }
+
+  .footer::after {
+    position: relative;
+    right: 65%;
+    width: 100%;
+  }
+
+  .footer_blogs_image_caption {
+    width: 100%
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+
+  /* About Us */
+
+  .AboutUs_header__inner p,
+  .WhoWeAre_header__inner p,
+  .OurWork_header__inner p,
+  .WhatWeDo_header__inner p {
+    font-size: 140%;
+  }
+
+  /* Statistics */
+  
+  .statistics_item {
+    border-right: 1px solid #ace8dd;
+    border-left: 1px solid #ace8dd; 
+  }
+
+  .statistics_item span {
+    font-size: 40%;
+  }
+
+  .statistics_item:nth-of-type(1) {
+    min-width: 35%
+  }
+  
+  /* Navigation */
+
+  .nav {
+    display: none;
+  }
+
+  .nav_burger {
+    display: block;
+  }
+
+  /* Amazing Services */
+
+  .services__inner {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+  }
+
+  /* For All devices */
+
+  .ForAllDevices_phone1 {
+    width: 55%;
+  }
+
+  .ForAllDevices_phone2 {
+    width: 50%;
+    right: 1%
+  }
+
+  /* We work with. Text */
+
+  .WeWorkWith_container {
+    display: inline
+  }
+
+  .service:nth-of-type(3)::after {
+    top: 15%
+  }
+
+  .service:not(.service:last-child)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    position: relative;
+    top: 15%;
+  }
+
+  .service p {
+    font-size: 150%;
+  }
+
+  /* What We Do. Text */
+
+  .WhatWeDo_main__inner {
+    gap: 0
+  }
+
+  .WhatWeDo_text p {
+    font-size: 1.5vmax;
+  }
+
+  /* Logos */
+
+  .logos img {
+    width: 100%
+  }
+
+  /* Some of our work. Images. */
+
+  .OurWork__img:hover::after {
+    left: 40vw;
+    top: 35%;
+  }
+
+  .OurWork__img_special:hover::after {
+    left: 40vw;
+    top: 42%;
+  }
+
+  .OurWork_image__inner {
+    grid-template-columns: 1fr;
+  }
+  
+  .OurWork_container {
+    min-height: 500px;
+  }
+  
+  .OurWork__item_6 {
+    grid-column: auto;
+  }
+
+  .OurWork__item_special {
+    height: 800px;
+  }
+
+  /* Quote 2 */
+
+  .quote_2 {
+    margin-top: 100px;
+  }
+
+  .quote_2 blockquote p {
+    width: 100%;
+  }
+
+  /* Happy Clients */
+
+  .HappyClients_header__inner {
+    margin-top: 100px;
+  }
+  
+  .HappyClients_clients__inner {
+    grid-template-columns: 1fr;
+  }
+
+  /* Our Stories */
+  
+  .OurStories_container {
+    height: 1100px;
+  }
+
+  .OurStories_image__inner {
+    grid-template-columns: 1fr;
+    gap: 150px;
+  }  
+
+  .OurStories__img::after {
+    height: 20%;
+  }
+
+  .OurStories__item::after {
+    font-size: 1.5vmax
+  }
+}
