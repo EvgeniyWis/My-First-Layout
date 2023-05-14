@@ -9,5 +9,6 @@
    1. Склонируйте данный репозиторий.
    2. Откройте файл ```index.html```
    
+Или вы можете просто зайти на [сайт](https://kriswis.github.io/My-First-Layout/), загруженный на Github Pages.
 # Макет вёрстки
 ![MoGo_FREE_Template_by_Laaqiq psd](https://user-images.githubusercontent.com/94256853/233341414-449cf3a4-6e1d-4102-91d2-7d3a67fde756.png)
